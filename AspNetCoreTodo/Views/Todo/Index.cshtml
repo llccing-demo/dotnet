@@ -1,5 +1,36 @@
-@model TodoViewItem
+@using AspNetCoreTodo.Models;
+
+@model TodoViewModel
 
 @{
-    
+    ViewData["Title"] = "TODO List";
 }
+
+<div class="panel panel-default todo-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>Item</td>
+                <td>Due</td>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" class="done-checkbox">
+                </td>
+                <td>@item.Title</td>
+                <td>@item.DueAt</td>
+            </tr>
+        }
+    </table>
+
+    <div class="panel-footer add-item-form">
+        this is footer!
+    </div>
+</div>
