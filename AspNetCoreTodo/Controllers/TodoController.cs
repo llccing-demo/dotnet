@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 using AspNetCoreTodo.Services;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCoreTodo.Controllers
 {
+    [Authorize]
     public class TodoController: Controller
     {
         private readonly ITodoItemService _todoItemService;
