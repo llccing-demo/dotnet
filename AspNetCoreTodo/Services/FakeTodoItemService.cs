@@ -7,6 +7,11 @@ namespace AspNetCoreTodo.Services
 {
     public class FakeTodoItemService : ITodoItemService
     {
+        public Task<bool> AddItemAsync(TodoItem newItem)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<TodoItem[]> GetIncompleteItemAsync()
         {
             var item1 = new TodoItem
@@ -22,6 +27,11 @@ namespace AspNetCoreTodo.Services
             };
 
             return Task.FromResult(new[] { item1, item2 });
+        }
+
+        public Task<bool> MarkDoneAsync(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
