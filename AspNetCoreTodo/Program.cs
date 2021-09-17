@@ -27,6 +27,7 @@ namespace AspNetCoreTodo
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
         //此方法暂时不可用，需要弄清楚 IWebHost 如何被传入进来。下面的链接解决了这个问题
         //https://stackoverflow.com/questions/59774559/how-do-i-get-a-instance-of-a-service-in-asp-net-core-3-1
         public static void InitializeDatabase(IHost host)
