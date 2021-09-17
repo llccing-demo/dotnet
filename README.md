@@ -3,10 +3,9 @@
 - myApp 命令行应用
 - dotnetWebApi, rest api
 - AspNetCoreTodo, todo mvc
+- AspNetCoreTodo.UnitTest, todo mvc test
 
 ## myApp
-
-de
 
 ## AspNetCoreTodo
 
