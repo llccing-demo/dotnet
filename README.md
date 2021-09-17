@@ -12,7 +12,7 @@ de
 
 ### identity
 
-认证服务能够注册，但是登录卡住了。
+注意注册后不能登录，调整 AspNetUsers 表中的 EmailConfirmed 字段为 1。
 
 ### 参考
 
