@@ -15,7 +15,7 @@
 
 ### 参考
 
-- https://windsting.github.io/little-aspnetcore-book/book/
+- https://windsting.github.io/little-aspnetcore-book/book/ 这篇文章很有帮助，领导让你系统的了解MVC，不难，但是有挑战。
 - https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-5.0&tabs=visual-studio identity说明
 
 ## dotnetWebApi
