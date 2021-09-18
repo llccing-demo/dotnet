@@ -1,0 +1,14 @@
+# 执行过程报错，暂时忽略。改为直接在 AspNetCoreTodo 目录中 使用 Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+COPY AspNetCoreTodo/*.csproj ./app/AspNetCoreTodo/
+WORKDIR /app/AspNetCoreTodo
+RUN dotnet restore
+
+COPY AspNetCoreTodo/. ./AspNetCoreTodo/
+RUN dotnet build -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
+ENV ASPNETCORE_URLS http://+:80
+WORKDIR /app
+COPY --from=build /app/AspNetCoreTodo/out ./
+ENTRYPOINT ["dotnet", "AspNetCoreTodo.dll"]
