@@ -20,7 +20,6 @@ namespace AspNetCoreTodo.Controllers
             _userManager = userManager;
         }
 
-        // 返回首页
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -76,7 +75,6 @@ namespace AspNetCoreTodo.Controllers
                 return BadRequest("Could not mark item as done.");
             }
 
-            //此处会被重定向到 Todo/Index，而不是整个网站的 Index
             return RedirectToAction("Index");
 
         }
