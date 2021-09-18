@@ -69,4 +69,5 @@ docker-compose up --scale backend=5
 - https://www.jianshu.com/p/9cab14732dba docker-compose 一次性启动两个 web
 - https://docs.microsoft.com/zh-cn/dotnet/architecture/microservices/ 微服务相关
 - https://github.com/dotnet/aspnetcore github dotnet 源码
+- https://blog.johnwu.cc/article/ironman-day01-asp-net-core-starting.html 30days 挑战
 
